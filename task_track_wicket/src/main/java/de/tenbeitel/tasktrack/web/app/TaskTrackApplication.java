@@ -32,7 +32,7 @@ public class TaskTrackApplication extends WebApplication {
 
     final AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
     // Scan package for annotated beans
-    ctx.scan("de.tenbeitel.tasktrack.service");
+    ctx.scan("org.wicketTutorial.ejbBean");
     ctx.refresh();
     getComponentInstantiationListeners().add(new SpringComponentInjector(this, ctx));
   }
