@@ -1,7 +1,10 @@
-package de.tenbeitel;
+package de.tenbeitel.tasktrack.web.app;
 
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.protocol.http.WebApplication;
+
+import de.tenbeitel.Start;
+import de.tenbeitel.tasktrack.web.perspective.main.HomePage;
 
 /**
  * Application object for your web application.
@@ -9,7 +12,7 @@ import org.apache.wicket.protocol.http.WebApplication;
  * 
  * @see de.tenbeitel.Start#main(String[])
  */
-public class WicketApplication extends WebApplication
+public class TaskTrackApplication extends WebApplication
 {
 	/**
 	 * @see org.apache.wicket.Application#getHomePage()

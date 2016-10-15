@@ -1,4 +1,4 @@
-package de.tenbeitel;
+package de.tenbeitel.tasktrack.web.perspective.main;
 
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.apache.wicket.markup.html.basic.Label;

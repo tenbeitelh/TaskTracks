@@ -1,8 +1,11 @@
-package de.tenbeitel;
+package de.tenbeitel.tasktack.web.perspective.main;
 
 import org.apache.wicket.util.tester.WicketTester;
 import org.junit.Before;
 import org.junit.Test;
+
+import de.tenbeitel.tasktrack.web.app.TaskTrackApplication;
+import de.tenbeitel.tasktrack.web.perspective.main.HomePage;
 
 /**
  * Simple test using the WicketTester
@@ -14,7 +17,7 @@ public class TestHomePage
 	@Before
 	public void setUp()
 	{
-		tester = new WicketTester(new WicketApplication());
+		tester = new WicketTester(new TaskTrackApplication());
 	}
 
 	@Test
