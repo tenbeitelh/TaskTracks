@@ -31,7 +31,7 @@
 	<properties>
 		<wicket.version>7.4.0</wicket.version>
 		<jetty9.version>9.2.13.v20150730</jetty9.version>
-		<log4j.version>2.5</log4j.version>
+		<slf4j.version>1.7.7</slf4j.version>
 		<junit.version>4.12</junit.version>
 		<spring.version>4.3.3.RELEASE</spring.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -61,20 +61,28 @@
 			<artifactId>wicket-core</artifactId>
 			<version>${wicket.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.apache.wicket</groupId>
+			<artifactId>wicket-ioc</artifactId>
+			<version>${wicket.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.wicket/wicket-spring -->
+		<dependency>
+			<groupId>org.apache.wicket</groupId>
+			<artifactId>wicket-spring</artifactId>
+			<version>${wicket.version}</version>
+		</dependency>
+
 		<!-- OPTIONAL DEPENDENCY <dependency> <groupId>org.apache.wicket</groupId> 
 			<artifactId>wicket-extensions</artifactId> <version>${wicket.version}</version> 
 			</dependency> -->
 
-		<!-- LOGGING DEPENDENCIES - LOG4J -->
 		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-slf4j-impl</artifactId>
-			<version>${log4j.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>${log4j.version}</version>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${slf4j.version}</version>
 		</dependency>
 
 		<!-- JUNIT DEPENDENCY FOR TESTING -->

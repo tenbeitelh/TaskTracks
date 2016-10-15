@@ -3,6 +3,7 @@ package de.tenbeitel.tasktrack.web.app;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.protocol.http.WebApplication;
 import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import de.tenbeitel.tasktrack.web.perspective.main.HomePage;
 
@@ -26,7 +27,13 @@ public class TaskTrackApplication extends WebApplication {
   @Override
   public void init() {
     super.init();
-    getComponentInstantiationListeners().add(new SpringComponentInjector(this));
+    // getComponentInstantiationListeners().add(new SpringComponentInjector(this));
     // add your configuration here
+
+    final AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
+    // Scan package for annotated beans
+    ctx.scan("de.tenbeitel.tasktrack.service");
+    ctx.refresh();
+    getComponentInstantiationListeners().add(new SpringComponentInjector(this, ctx));
   }
 }
